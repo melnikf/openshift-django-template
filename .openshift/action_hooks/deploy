@@ -6,7 +6,7 @@ django-admin startproject ${OPENSHIFT_APP_NAME}site ${OPENSHIFT_REPO_DIR}/
 
 echo "Creating any necessary tables"
 #django-admin makemigrations application
-#django-admin migrate
+django-admin migrate
 
 #echo "Collect static files"
 #django-admin collectstatic --noinput
