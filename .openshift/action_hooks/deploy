@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Creating django project for $OPENSHIFT_APPNAME app"
-django-admin startproject ${OPENSHIFT_APPNAME}site
+echo "Creating django project for $OPENSHIFT_APP_NAME app"
+django-admin startproject ${OPENSHIFT_APP_NAME}site
 
 echo "Creating any necessary tables"
 #django-admin makemigrations application
