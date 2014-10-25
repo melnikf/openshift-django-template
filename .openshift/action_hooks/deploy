@@ -1,8 +1,11 @@
 #!/bin/bash
 
+echo "Creating django project for $OPENSHIFT_APPNAME app"
+django-admin startproject ${OPENSHIFT_APPNAME}site
+
 echo "Creating any necessary tables"
 #django-admin makemigrations application
 django-admin migrate
 
-echo "Collect static files"
-django-admin collectstatic --noinput
+#echo "Collect static files"
+#django-admin collectstatic --noinput
