@@ -4,6 +4,8 @@ echo "App directory is $OPENSHIFT_REPO_DIR"
 echo "Creating django project for $OPENSHIFT_APP_NAME app"
 django-admin startproject ${OPENSHIFT_APP_NAME}site ${OPENSHIFT_REPO_DIR}/
 
+ls -l
+
 echo "Creating any necessary tables"
 #django-admin makemigrations application
 django-admin migrate
