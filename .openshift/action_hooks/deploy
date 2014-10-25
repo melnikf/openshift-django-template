@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
+#source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
 
 echo "App directory is $OPENSHIFT_REPO_DIR"
 echo "Creating django project for $OPENSHIFT_APP_NAME app"
@@ -9,8 +9,8 @@ django-admin startproject ${OPENSHIFT_APP_NAME}site ${OPENSHIFT_REPO_DIR}
 [[ ! -f ${OPENSHIFT_REPO_DIR}manage.py ]] && echo "Manage file not exist!"
 
 echo "Creating any necessary tables"
-#django-admin makemigrations application
-django-admin migrate
+#${OPENSHIFT_REPO_DIR}manage.py makemigrations application
+${OPENSHIFT_REPO_DIR}manage.py migrate
 
 #echo "Collect static files"
-#django-admin collectstatic --noinput
+#${OPENSHIFT_REPO_DIR}manage.py collectstatic --noinput
