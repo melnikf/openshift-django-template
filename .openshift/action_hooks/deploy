@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Creating any necessary tables"
+#django-admin makemigrations application
+django-admin migrate
+
+echo "Collect static files"
+django-admin collectstatic --noinput
